@@ -7,7 +7,7 @@
 - ⚙️ I use daily: `.py`, `.js`, `.ts`, `.html`, `.scss`, `.svg`, `.png`, `.json`, `.yml`, `.sql`
 - 🌱 Learning more about and studying: **Open Source, React, DS Algorithms**
 - 💬 Ping me about: **wed design**, **social media**, **diversity & inclusion**, **mentorship**, **Beyonce**
-- 📫 Reach me asap: prasillamanchem@gmail.com
+- 📫 Reach me asap:tejamanchem144@gmail.com
 - 😄 Passionate about accessibility and committed to a web that works for everyone
 
 ### 🛠 &nbsp;Tech Stack
@@ -55,17 +55,17 @@
 ### ⚙️ &nbsp;GitHub Analytics
 
 <p align="center">
-<a href="https://github.com/prasilla487">
-<img  src="https://github-readme-stats.vercel.app/api/top-langs?username=prasilla487&show_icons=true&locale=en&layout=compact&theme=nightowl&hide_border=true" alt="prasilla" height=150px/><img  src="https://github-readme-stats.vercel.app/api?username=prasilla487&show_icons=true&locale=en&theme=nightowl&hide_border=true" alt="prasilla" height=150px />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=prasilla487&theme=nightowl&hide_border=true" alt="prasilla"/>
+<a href="https://github.com/tejamanchem">
+<img  src="https://github-readme-stats.vercel.app/api/top-langs?username=tejamanchem&show_icons=true&locale=en&layout=compact&theme=nightowl&hide_border=true" alt="tejamanchem" height=150px/><img  src="https://github-readme-stats.vercel.app/api?username=tejamanchem&show_icons=true&locale=en&theme=nightowl&hide_border=true" alt="tejamanchem" height=150px />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=tejamanchem&theme=nightowl&hide_border=true" alt="tejamanchem"/>
 </a>
 </p>
 
 ### 🤝🏻 &nbsp;Connect with Me
 
 <p align="center">
-<a href="https://prasilla487.github.io/prasilla487"><img src="https://img.shields.io/badge/-Website-00A5E9?style=flat&logo=googlechrome&logoColor=white"/></a>
-<a href="mailto:prasillamanchem@gmail.com"><img src="https://img.shields.io/badge/-Mail-D14836?style=flat&logo=Gmail&logoColor=white"/></a>
-<a href="https://www.linkedin.com/in/prasilla-devi-manchem-80694a199"><img src="https://img.shields.io/badge/-LinkedIn-0077B5?style=flat&logo=Linkedin&logoColor=white"/></a>
-<a href="https://www.hackerrank.com/prasillamanchem"><img src="https://img.shields.io/badge/-Hackerrank-32CD30?style=flat&logo=hackerrank&logoColor=white"/></a>
+<a href="https://tejamanchem.github.io/tejamanchem"><img src="https://img.shields.io/badge/-Website-00A5E9?style=flat&logo=googlechrome&logoColor=white"/></a>
+<a href="mailto:tejamanchem144@gmail.com"><img src="https://img.shields.io/badge/-Mail-D14836?style=flat&logo=Gmail&logoColor=white"/></a>
+<a href="https://www.linkedin.com/in/teja-sai-018665215"><img src="https://img.shields.io/badge/-LinkedIn-0077B5?style=flat&logo=Linkedin&logoColor=white"/></a>
+<a href="https://www.hackerrank.com/tejamanchem144"><img src="https://img.shields.io/badge/-Hackerrank-32CD30?style=flat&logo=hackerrank&logoColor=white"/></a>
 </p>
