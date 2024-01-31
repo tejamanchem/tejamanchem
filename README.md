@@ -70,7 +70,7 @@
 ### 🤖 Contribution Graph 
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.cyclic.app/graph?username=tejamanchem&count_private=true&theme=react-dark&hide_border=true" alt="tejamanchem"/>
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=tejamanchem&count_private=true&theme=react-dark&hide_border=true" alt="tejamanchem"/>
 </p>
 
 ### 🤝🏻 &nbsp;Connect with Me
