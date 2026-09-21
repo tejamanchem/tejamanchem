@@ -1,0 +1,1332 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="100%" height="100%">
+  <defs>
+
+    <!-- Background -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06080d"/>
+      <stop offset="50%" stop-color="#0c111b"/>
+      <stop offset="100%" stop-color="#05070a"/>
+    </linearGradient>
+
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141a27"/>
+      <stop offset="100%" stop-color="#0d121c"/>
+    </linearGradient>
+
+    <!-- Glows -->
+    <filter id="glowBlue" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="glowGreen" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="glowOrange" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <style>
+
+      .title {
+        font-family: 'JetBrains Mono', 'Fira Code', monospace;
+        font-size: 13px;
+        font-weight: 700;
+        fill: #f8fafc;
+      }
+
+      .subtext {
+        font-family: 'Inter', -apple-system, sans-serif;
+        font-size: 10.5px;
+        fill: #94a3b8;
+      }
+
+      .badge-text {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 8.5px;
+        font-weight: 700;
+      }
+
+      .metric-label {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 9px;
+        font-weight: 600;
+      }
+
+      .section-label {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 9px;
+        font-weight: 700;
+        fill: #64748b;
+        letter-spacing: 1px;
+      }
+
+      .stream {
+        stroke-dasharray: 8 10;
+        animation: streamFlow 1.2s linear infinite;
+      }
+
+      .stream-fast {
+        stroke-dasharray: 6 8;
+        animation: streamFlow .8s linear infinite;
+      }
+
+      .stream-reverse {
+        stroke-dasharray: 8 10;
+        animation: streamReverse 1.2s linear infinite;
+      }
+
+      @keyframes streamFlow {
+        from {
+          stroke-dashoffset: 36;
+        }
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+
+      @keyframes streamReverse {
+        from {
+          stroke-dashoffset: 0;
+        }
+        to {
+          stroke-dashoffset: 36;
+        }
+      }
+
+      .pulse {
+        animation: pulse 2s ease-in-out infinite;
+      }
+
+      @keyframes pulse {
+        0%,100% {
+          opacity: .35;
+          transform: scale(.9);
+        }
+        50% {
+          opacity: 1;
+          transform: scale(1.15);
+        }
+      }
+
+    </style>
+  </defs>
+
+
+  <!-- ====================================================== -->
+  <!-- FRAME -->
+  <!-- ====================================================== -->
+
+  <rect
+    x="2"
+    y="2"
+    width="1196"
+    height="696"
+    rx="14"
+    fill="url(#bgGrad)"
+    stroke="#1e293b"
+    stroke-width="2"
+  />
+
+
+  <!-- ====================================================== -->
+  <!-- TERMINAL HEADER -->
+  <!-- ====================================================== -->
+
+  <rect
+    x="2"
+    y="2"
+    width="1196"
+    height="40"
+    rx="14"
+    fill="#0b1017"
+  />
+
+  <rect
+    x="2"
+    y="27"
+    width="1196"
+    height="15"
+    fill="#0b1017"
+  />
+
+  <line
+    x1="2"
+    y1="42"
+    x2="1198"
+    y2="42"
+    stroke="#1e293b"
+    stroke-width="1.5"
+  />
+
+  <!-- Window buttons -->
+  <circle cx="25" cy="22" r="5" fill="#ef4444"/>
+  <circle cx="43" cy="22" r="5" fill="#eab308"/>
+  <circle cx="61" cy="22" r="5" fill="#22c55e"/>
+
+  <text
+    x="82"
+    y="26"
+    class="title"
+    font-size="12px"
+  >
+    TEJA::CORE_BACKEND_PRODUCTION_ARCHITECTURE
+  </text>
+
+  <!-- Runtime badge -->
+  <rect
+    x="790"
+    y="11"
+    width="145"
+    height="21"
+    rx="4"
+    fill="#101827"
+    stroke="#22c55e"
+  />
+
+  <circle
+    cx="803"
+    cy="21.5"
+    r="3.5"
+    fill="#22c55e"
+    class="pulse"
+  />
+
+  <text
+    x="813"
+    y="25"
+    class="badge-text"
+    fill="#4ade80"
+  >
+    SYSTEM: HEALTHY
+  </text>
+
+  <!-- Deployment badge -->
+  <rect
+    x="945"
+    y="11"
+    width="230"
+    height="21"
+    rx="4"
+    fill="#101827"
+    stroke="#38bdf8"
+  />
+
+  <circle
+    cx="958"
+    cy="21.5"
+    r="3.5"
+    fill="#38bdf8"
+    class="pulse"
+  />
+
+  <text
+    x="968"
+    y="25"
+    class="badge-text"
+    fill="#7dd3fc"
+  >
+    DEPLOYMENT: ZERO-DOWNTIME
+  </text>
+
+
+  <!-- ====================================================== -->
+  <!-- SECTION LABELS -->
+  <!-- ====================================================== -->
+
+  <text x="40" y="66" class="section-label">
+    CLIENT / EDGE
+  </text>
+
+  <text x="320" y="66" class="section-label">
+    APPLICATION LAYER
+  </text>
+
+  <text x="700" y="66" class="section-label">
+    EVENT / DATA LAYER
+  </text>
+
+  <text x="1010" y="66" class="section-label">
+    INFRA / OBSERVABILITY
+  </text>
+
+
+  <!-- ====================================================== -->
+  <!-- FLOW LINES -->
+  <!-- ====================================================== -->
+
+  <!-- Client -> Gateway -->
+  <path
+    d="M 190 130 L 280 130"
+    stroke="#38bdf8"
+    stroke-width="2.5"
+    fill="none"
+    class="stream-fast"
+    opacity=".85"
+    filter="url(#glowBlue)"
+  />
+
+  <!-- Gateway -> Services -->
+  <path
+    d="M 440 130 L 510 130"
+    stroke="#22c55e"
+    stroke-width="2.5"
+    fill="none"
+    class="stream"
+    opacity=".85"
+    filter="url(#glowGreen)"
+  />
+
+  <!-- Services -> Kafka -->
+  <path
+    d="M 665 130 L 730 130"
+    stroke="#f97316"
+    stroke-width="2.5"
+    fill="none"
+    class="stream-fast"
+    opacity=".85"
+    filter="url(#glowOrange)"
+  />
+
+  <!-- Kafka -> Data -->
+  <path
+    d="M 875 130 L 930 130"
+    stroke="#a855f7"
+    stroke-width="2.5"
+    fill="none"
+    class="stream"
+    opacity=".8"
+  />
+
+  <!-- Services -> Cache -->
+  <path
+    d="M 590 165 L 590 245 L 700 245"
+    stroke="#ef4444"
+    stroke-width="2"
+    fill="none"
+    class="stream"
+    opacity=".75"
+  />
+
+  <!-- Kafka -> Worker -->
+  <path
+    d="M 800 165 L 800 245 L 880 245"
+    stroke="#f97316"
+    stroke-width="2"
+    fill="none"
+    class="stream"
+    opacity=".75"
+  />
+
+  <!-- Worker -> External -->
+  <path
+    d="M 950 285 L 1010 285"
+    stroke="#38bdf8"
+    stroke-width="2"
+    fill="none"
+    class="stream-fast"
+    opacity=".75"
+  />
+
+  <!-- Monitoring lines -->
+  <path
+    d="M 390 360 L 390 445 L 480 445"
+    stroke="#64748b"
+    stroke-width="1.8"
+    fill="none"
+    stroke-dasharray="4 7"
+    opacity=".6"
+  />
+
+  <path
+    d="M 800 360 L 800 445 L 710 445"
+    stroke="#64748b"
+    stroke-width="1.8"
+    fill="none"
+    stroke-dasharray="4 7"
+    opacity=".6"
+  />
+
+
+  <!-- ====================================================== -->
+  <!-- 1. CLIENTS -->
+  <!-- ====================================================== -->
+
+  <g transform="translate(40,90)">
+
+    <rect
+      width="150"
+      height="80"
+      rx="8"
+      fill="url(#cardGrad)"
+      stroke="#38bdf8"
+      stroke-width="1.8"
+    />
+
+    <circle
+      cx="16"
+      cy="18"
+      r="4"
+      fill="#38bdf8"
+      class="pulse"
+    />
+
+    <text
+      x="28"
+      y="21"
+      class="title"
+      fill="#7dd3fc"
+    >
+      Clients
+    </text>
+
+    <text x="16" y="43" class="subtext">
+      Web / Mobile Apps
+    </text>
+
+    <text x="16" y="59" class="subtext">
+      Internal Consumers
+    </text>
+
+    <rect
+      x="14"
+      y="65"
+      width="122"
+      height="10"
+      rx="2"
+      fill="#082f49"
+    />
+
+  </g>
+
+
+  <!-- ====================================================== -->
+  <!-- 2. EDGE / GATEWAY -->
+  <!-- ====================================================== -->
+
+  <g transform="translate(280,90)">
+
+    <rect
+      width="160"
+      height="80"
+      rx="8"
+      fill="url(#cardGrad)"
+      stroke="#0284c7"
+      stroke-width="1.8"
+    />
+
+    <circle
+      cx="16"
+      cy="18"
+      r="4"
+      fill="#38bdf8"
+      class="pulse"
+    />
+
+    <text
+      x="28"
+      y="21"
+      class="title"
+      fill="#38bdf8"
+    >
+      API Gateway
+    </text>
+
+    <text x="16" y="43" class="subtext">
+      TLS / Auth / Routing
+    </text>
+
+    <text x="16" y="59" class="subtext">
+      Rate Limit / Load Balance
+    </text>
+
+    <rect
+      x="14"
+      y="65"
+      width="132"
+      height="10"
+      rx="2"
+      fill="#082f49"
+    />
+
+  </g>
+
+
+  <!-- ====================================================== -->
+  <!-- 3. BACKEND SERVICES -->
+  <!-- ====================================================== -->
+
+  <g transform="translate(510,80)">
+
+    <rect
+      width="155"
+      height="100"
+      rx="8"
+      fill="url(#cardGrad)"
+      stroke="#22c55e"
+      stroke-width="1.8"
+    />
+
+    <circle
+      cx="16"
+      cy="18"
+      r="4"
+      fill="#22c55e"
+      class="pulse"
+    />
+
+    <text
+      x="28"
+      y="21"
+      class="title"
+      fill="#4ade80"
+    >
+      Backend Services
+    </text>
+
+    <text x="16" y="43" class="subtext">
+      REST / GraphQL APIs
+    </text>
+
+    <text x="16" y="59" class="subtext">
+      Microservices / Workers
+    </text>
+
+    <text x="16" y="75" class="subtext">
+      Business Logic
+    </text>
+
+    <rect
+      x="14"
+      y="82"
+      width="127"
+      height="12"
+      rx="2"
+      fill="#064e3b"
+    />
+
+    <text
+      x="20"
+      y="91"
+      class="badge-text"
+      fill="#86efac"
+    >
+      HORIZONTAL SCALE
+    </text>
+
+  </g>
+
+
+  <!-- ====================================================== -->
+  <!-- 4. KAFKA / EVENT BUS -->
+  <!-- ====================================================== -->
+
+  <g transform="translate(730,80)">
+
+    <rect
+      width="145"
+      height="100"
+      rx="8"
+      fill="url(#cardGrad)"
+      stroke="#f97316"
+      stroke-width="1.8"
+    />
+
+    <circle
+      cx="16"
+      cy="18"
+      r="4"
+      fill="#f97316"
+      class="pulse"
+    />
+
+    <text
+      x="28"
+      y="21"
+      class="title"
+      fill="#fb923c"
+    >
+      Event Bus
+    </text>
+
+    <text x="16" y="43" class="subtext">
+      Kafka / Queues
+    </text>
+
+    <text x="16" y="59" class="subtext">
+      Async Processing
+    </text>
+
+    <text x="16" y="75" class="subtext">
+      Retry / DLQ / Replay
+    </text>
+
+    <rect
+      x="14"
+      y="82"
+      width="117"
+      height="12"
+      rx="2"
+      fill="#431407"
+    />
+
+    <text
+      x="20"
+      y="91"
+      class="badge-text"
+      fill="#fdba74"
+    >
+      EVENT DRIVEN
+    </text>
+
+  </g>
+
+
+  <!-- ====================================================== -->
+  <!-- 5. DATABASE -->
+  <!-- ====================================================== -->
+
+  <g transform="translate(930,90)">
+
+    <rect
+      width="140"
+      height="80"
+      rx="8"
+      fill="url(#cardGrad)"
+      stroke="#a855f7"
+      stroke-width="1.8"
+    />
+
+    <circle
+      cx="16"
+      cy="18"
+      r="4"
+      fill="#a855f7"
+      class="pulse"
+    />
+
+    <text
+      x="28"
+      y="21"
+      class="title"
+      fill="#c084fc"
+    >
+      Databases
+    </text>
+
+    <text x="16" y="43" class="subtext">
+      PostgreSQL / MongoDB
+    </text>
+
+    <text x="16" y="59" class="subtext">
+      Replicas / Backups
+    </text>
+
+    <rect
+      x="14"
+      y="65"
+      width="112"
+      height="10"
+      rx="2"
+      fill="#3b0764"
+    />
+
+  </g>
+
+
+  <!-- ====================================================== -->
+  <!-- 6. CACHE -->
+  <!-- ====================================================== -->
+
+  <g transform="translate(700,220)">
+
+    <rect
+      width="150"
+      height="85"
+      rx="8"
+      fill="url(#cardGrad)"
+      stroke="#ef4444"
+      stroke-width="1.6"
+    />
+
+    <circle
+      cx="15"
+      cy="17"
+      r="3.5"
+      fill="#ef4444"
+    />
+
+    <text
+      x="25"
+      y="20"
+      class="title"
+      fill="#f87171"
+      font-size="12px"
+    >
+      Redis Cache
+    </text>
+
+    <text x="14" y="40" class="subtext">
+      Hot Data / Sessions
+    </text>
+
+    <text x="14" y="56" class="subtext">
+      Distributed Locks
+    </text>
+
+    <rect
+      x="12"
+      y="65"
+      width="120"
+      height="12"
+      rx="2"
+      fill="#450a0a"
+    />
+
+    <text
+      x="18"
+      y="74"
+      class="badge-text"
+      fill="#fca5a5"
+    >
+      LOW LATENCY
+    </text>
+
+  </g>
+
+
+  <!-- ====================================================== -->
+  <!-- 7. ASYNC WORKERS -->
+  <!-- ====================================================== -->
+
+  <g transform="translate(880,220)">
+
+    <rect
+      width="130"
+      height="85"
+      rx="8"
+      fill="url(#cardGrad)"
+      stroke="#f97316"
+      stroke-width="1.6"
+    />
+
+    <circle
+      cx="15"
+      cy="17"
+      r="3.5"
+      fill="#f97316"
+    />
+
+    <text
+      x="25"
+      y="20"
+      class="title"
+      fill="#fb923c"
+      font-size="12px"
+    >
+      Workers
+    </text>
+
+    <text x="14" y="40" class="subtext">
+      Background Jobs
+    </text>
+
+    <text x="14" y="56" class="subtext">
+      Retries / Scheduling
+    </text>
+
+    <rect
+      x="12"
+      y="65"
+      width="102"
+      height="12"
+      rx="2"
+      fill="#431407"
+    />
+
+    <text
+      x="18"
+      y="74"
+      class="badge-text"
+      fill="#fdba74"
+    >
+      AUTO SCALE
+    </text>
+
+  </g>
+
+
+  <!-- ====================================================== -->
+  <!-- 8. EXTERNAL SYSTEMS -->
+  <!-- ====================================================== -->
+
+  <g transform="translate(1030,240)">
+
+    <rect
+      width="135"
+      height="85"
+      rx="8"
+      fill="#111827"
+      stroke="#38bdf8"
+      stroke-width="1.5"
+    />
+
+    <text
+      x="12"
+      y="22"
+      class="title"
+      fill="#7dd3fc"
+      font-size="11px"
+    >
+      Integrations
+    </text>
+
+    <text x="12" y="42" class="subtext">
+      Payments / CRM
+    </text>
+
+    <text x="12" y="58" class="subtext">
+      3rd Party APIs
+    </text>
+
+    <text
+      x="12"
+      y="75"
+      class="badge-text"
+      fill="#38bdf8"
+    >
+      TIMEOUT + RETRY
+    </text>
+
+  </g>
+
+
+  <!-- ====================================================== -->
+  <!-- 9. CONTAINER / KUBERNETES -->
+  <!-- ====================================================== -->
+
+  <g transform="translate(40,390)">
+
+    <rect
+      width="220"
+      height="105"
+      rx="8"
+      fill="url(#cardGrad)"
+      stroke="#22c55e"
+      stroke-width="1.6"
+    />
+
+    <circle
+      cx="16"
+      cy="18"
+      r="4"
+      fill="#22c55e"
+    />
+
+    <text
+      x="28"
+      y="21"
+      class="title"
+      fill="#4ade80"
+    >
+      Container Platform
+    </text>
+
+    <text x="16" y="45" class="subtext">
+      Docker Containers
+    </text>
+
+    <text x="16" y="62" class="subtext">
+      Kubernetes / ECS
+    </text>
+
+    <text x="16" y="79" class="subtext">
+      Health Checks / Autoscaling
+    </text>
+
+    <rect
+      x="14"
+      y="87"
+      width="180"
+      height="12"
+      rx="2"
+      fill="#064e3b"
+    />
+
+    <text
+      x="20"
+      y="96"
+      class="badge-text"
+      fill="#86efac"
+    >
+      SELF HEALING + SCALE
+    </text>
+
+  </g>
+
+
+  <!-- ====================================================== -->
+  <!-- 10. CI/CD -->
+  <!-- ====================================================== -->
+
+  <g transform="translate(290,390)">
+
+    <rect
+      width="200"
+      height="105"
+      rx="8"
+      fill="url(#cardGrad)"
+      stroke="#38bdf8"
+      stroke-width="1.6"
+    />
+
+    <circle
+      cx="16"
+      cy="18"
+      r="4"
+      fill="#38bdf8"
+    />
+
+    <text
+      x="28"
+      y="21"
+      class="title"
+      fill="#7dd3fc"
+    >
+      CI / CD Pipeline
+    </text>
+
+    <text x="16" y="45" class="subtext">
+      Build → Test → Scan
+    </text>
+
+    <text x="16" y="62" class="subtext">
+      Artifact → Deploy
+    </text>
+
+    <text x="16" y="79" class="subtext">
+      Canary / Rolling Release
+    </text>
+
+    <rect
+      x="14"
+      y="87"
+      width="164"
+      height="12"
+      rx="2"
+      fill="#082f49"
+    />
+
+    <text
+      x="20"
+      y="96"
+      class="badge-text"
+      fill="#7dd3fc"
+    >
+      AUTOMATED DELIVERY
+    </text>
+
+  </g>
+
+
+  <!-- ====================================================== -->
+  <!-- 11. OBSERVABILITY -->
+  <!-- ====================================================== -->
+
+  <g transform="translate(520,390)">
+
+    <rect
+      width="200"
+      height="105"
+      rx="8"
+      fill="url(#cardGrad)"
+      stroke="#a855f7"
+      stroke-width="1.6"
+    />
+
+    <circle
+      cx="16"
+      cy="18"
+      r="4"
+      fill="#a855f7"
+    />
+
+    <text
+      x="28"
+      y="21"
+      class="title"
+      fill="#c084fc"
+    >
+      Observability
+    </text>
+
+    <text x="16" y="45" class="subtext">
+      Logs / Metrics / Traces
+    </text>
+
+    <text x="16" y="62" class="subtext">
+      Dashboards / Alerts
+    </text>
+
+    <text x="16" y="79" class="subtext">
+      Distributed Request IDs
+    </text>
+
+    <rect
+      x="14"
+      y="87"
+      width="164"
+      height="12"
+      rx="2"
+      fill="#3b0764"
+    />
+
+    <text
+      x="20"
+      y="96"
+      class="badge-text"
+      fill="#e9d5ff"
+    >
+      FULL REQUEST TRACE
+    </text>
+
+  </g>
+
+
+  <!-- ====================================================== -->
+  <!-- 12. SECURITY -->
+  <!-- ====================================================== -->
+
+  <g transform="translate(750,390)">
+
+    <rect
+      width="200"
+      height="105"
+      rx="8"
+      fill="url(#cardGrad)"
+      stroke="#f97316"
+      stroke-width="1.6"
+    />
+
+    <circle
+      cx="16"
+      cy="18"
+      r="4"
+      fill="#f97316"
+    />
+
+    <text
+      x="28"
+      y="21"
+      class="title"
+      fill="#fb923c"
+    >
+      Security
+    </text>
+
+    <text x="16" y="45" class="subtext">
+      OAuth / JWT / RBAC
+    </text>
+
+    <text x="16" y="62" class="subtext">
+      Secrets / Key Vault
+    </text>
+
+    <text x="16" y="79" class="subtext">
+      Network Policies / WAF
+    </text>
+
+    <rect
+      x="14"
+      y="87"
+      width="164"
+      height="12"
+      rx="2"
+      fill="#431407"
+    />
+
+    <text
+      x="20"
+      y="96"
+      class="badge-text"
+      fill="#fdba74"
+    >
+      DEFENSE IN DEPTH
+    </text>
+
+  </g>
+
+
+  <!-- ====================================================== -->
+  <!-- 13. CLOUD / INFRA -->
+  <!-- ====================================================== -->
+
+  <g transform="translate(980,390)">
+
+    <rect
+      width="185"
+      height="105"
+      rx="8"
+      fill="url(#cardGrad)"
+      stroke="#64748b"
+      stroke-width="1.6"
+    />
+
+    <circle
+      cx="16"
+      cy="18"
+      r="4"
+      fill="#94a3b8"
+    />
+
+    <text
+      x="28"
+      y="21"
+      class="title"
+      fill="#cbd5e1"
+    >
+      Cloud Infrastructure
+    </text>
+
+    <text x="16" y="45" class="subtext">
+      Azure / AWS
+    </text>
+
+    <text x="16" y="62" class="subtext">
+      VPC / DNS / LB / CDN
+    </text>
+
+    <text x="16" y="79" class="subtext">
+      Multi-AZ / Backups
+    </text>
+
+    <rect
+      x="14"
+      y="87"
+      width="150"
+      height="12"
+      rx="2"
+      fill="#1e293b"
+    />
+
+    <text
+      x="20"
+      y="96"
+      class="badge-text"
+      fill="#cbd5e1"
+    >
+      HIGH AVAILABILITY
+    </text>
+
+  </g>
+
+
+  <!-- ====================================================== -->
+  <!-- DEPLOYMENT FLOW -->
+  <!-- ====================================================== -->
+
+  <path
+    d="M 140 505
+       L 140 550
+       L 330 550"
+    stroke="#22c55e"
+    stroke-width="2"
+    fill="none"
+    class="stream"
+  />
+
+  <path
+    d="M 390 505
+       L 390 550
+       L 500 550"
+    stroke="#38bdf8"
+    stroke-width="2"
+    fill="none"
+    class="stream"
+  />
+
+  <path
+    d="M 620 505
+       L 620 550
+       L 710 550"
+    stroke="#a855f7"
+    stroke-width="2"
+    fill="none"
+    class="stream"
+  />
+
+
+  <!-- ====================================================== -->
+  <!-- PRODUCTION DEPLOYMENT PIPELINE -->
+  <!-- ====================================================== -->
+
+  <rect
+    x="40"
+    y="535"
+    width="1125"
+    height="75"
+    rx="8"
+    fill="#090d15"
+    stroke="#1e293b"
+    stroke-width="1.2"
+  />
+
+  <text
+    x="60"
+    y="557"
+    class="section-label"
+  >
+    PRODUCTION RELEASE FLOW
+  </text>
+
+  <text
+    x="60"
+    y="582"
+    class="metric-label"
+    fill="#94a3b8"
+  >
+    CODE
+  </text>
+
+  <text
+    x="175"
+    y="582"
+    class="metric-label"
+    fill="#94a3b8"
+  >
+    BUILD
+  </text>
+
+  <text
+    x="290"
+    y="582"
+    class="metric-label"
+    fill="#94a3b8"
+  >
+    TEST
+  </text>
+
+  <text
+    x="405"
+    y="582"
+    class="metric-label"
+    fill="#94a3b8"
+  >
+    SECURITY
+  </text>
+
+  <text
+    x="550"
+    y="582"
+    class="metric-label"
+    fill="#94a3b8"
+  >
+    STAGING
+  </text>
+
+  <text
+    x="700"
+    y="582"
+    class="metric-label"
+    fill="#94a3b8"
+  >
+    CANARY
+  </text>
+
+  <text
+    x="835"
+    y="582"
+    class="metric-label"
+    fill="#94a3b8"
+  >
+    ROLLING
+  </text>
+
+  <text
+    x="970"
+    y="582"
+    class="metric-label"
+    fill="#94a3b8"
+  >
+    PRODUCTION
+  </text>
+
+  <!-- Pipeline dots -->
+  <circle cx="140" cy="575" r="5" fill="#22c55e" class="pulse"/>
+  <circle cx="255" cy="575" r="5" fill="#38bdf8" class="pulse"/>
+  <circle cx="370" cy="575" r="5" fill="#38bdf8" class="pulse"/>
+  <circle cx="480" cy="575" r="5" fill="#f97316" class="pulse"/>
+  <circle cx="625" cy="575" r="5" fill="#a855f7" class="pulse"/>
+  <circle cx="765" cy="575" r="5" fill="#f97316" class="pulse"/>
+  <circle cx="900" cy="575" r="5" fill="#22c55e" class="pulse"/>
+  <circle cx="1080" cy="575" r="5" fill="#22c55e" class="pulse"/>
+
+
+  <!-- ====================================================== -->
+  <!-- BOTTOM METRICS -->
+  <!-- ====================================================== -->
+
+  <rect
+    x="40"
+    y="630"
+    width="1125"
+    height="42"
+    rx="8"
+    fill="#0b0f18"
+    stroke="#1e293b"
+    stroke-width="1.2"
+  />
+
+  <g transform="translate(65,653)">
+    <circle cx="0" cy="0" r="3" fill="#22c55e"/>
+    <text x="10" y="3" class="metric-label" fill="#94a3b8">
+      AVAILABILITY:
+      <tspan fill="#4ade80">99.9%+</tspan>
+    </text>
+  </g>
+
+  <g transform="translate(285,653)">
+    <circle cx="0" cy="0" r="3" fill="#38bdf8"/>
+    <text x="10" y="3" class="metric-label" fill="#94a3b8">
+      SCALING:
+      <tspan fill="#7dd3fc">HORIZONTAL</tspan>
+    </text>
+  </g>
+
+  <g transform="translate(505,653)">
+    <circle cx="0" cy="0" r="3" fill="#f97316"/>
+    <text x="10" y="3" class="metric-label" fill="#94a3b8">
+      DELIVERY:
+      <tspan fill="#fb923c">AUTOMATED</tspan>
+    </text>
+  </g>
+
+  <g transform="translate(710,653)">
+    <circle cx="0" cy="0" r="3" fill="#a855f7"/>
+    <text x="10" y="3" class="metric-label" fill="#94a3b8">
+      RECOVERY:
+      <tspan fill="#c084fc">SELF-HEALING</tspan>
+    </text>
+  </g>
+
+  <g transform="translate(930,653)">
+    <circle cx="0" cy="0" r="3" fill="#ef4444"/>
+    <text x="10" y="3" class="metric-label" fill="#94a3b8">
+      DATA:
+      <tspan fill="#f87171">DURABLE</tspan>
+    </text>
+  </g>
+
+</svg>
