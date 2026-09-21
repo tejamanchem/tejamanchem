@@ -1,0 +1,209 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07090e" />
+      <stop offset="50%" stop-color="#0d111a" />
+      <stop offset="100%" stop-color="#05070a" />
+    </linearGradient>
+
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141926" />
+      <stop offset="100%" stop-color="#0e121d" />
+    </linearGradient>
+
+    <filter id="glowOrange" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="glowCyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <style>
+      .title { font-family: 'JetBrains Mono', 'Fira Code', monospace; font-size: 13px; font-weight: 700; fill: #f8fafc; }
+      .subtext { font-family: 'Inter', -apple-system, sans-serif; font-size: 11px; fill: #94a3b8; }
+      .metric-label { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 600; }
+      .badge-text { font-family: 'JetBrains Mono', monospace; font-size: 9px; font-weight: 700; }
+      
+      .stream-line {
+        stroke-dasharray: 8 10;
+        animation: streamFlow 1.2s linear infinite;
+      }
+      .stream-line-reverse {
+        stroke-dasharray: 8 10;
+        animation: streamFlowRev 1.2s linear infinite;
+      }
+      .stream-fast {
+        stroke-dasharray: 6 8;
+        animation: streamFlow 0.8s linear infinite;
+      }
+
+      @keyframes streamFlow {
+        from { stroke-dashoffset: 36; }
+        to { stroke-dashoffset: 0; }
+      }
+
+      @keyframes streamFlowRev {
+        from { stroke-dashoffset: 0; }
+        to { stroke-dashoffset: 36; }
+      }
+
+      .pulse-green {
+        animation: pulseDot 2s ease-in-out infinite;
+      }
+      .pulse-orange {
+        animation: pulseDot 1.6s ease-in-out infinite;
+      }
+      .pulse-cyan {
+        animation: pulseDot 2.2s ease-in-out infinite;
+      }
+
+      @keyframes pulseDot {
+        0%, 100% { opacity: 0.35; transform: scale(0.9); }
+        50% { opacity: 1; transform: scale(1.15); filter: drop-shadow(0 0 6px rgba(34, 197, 94, 0.8)); }
+      }
+    </style>
+  </defs>
+
+  <!-- Frame Background -->
+  <rect x="2" y="2" width="916" height="476" rx="14" fill="url(#bgGrad)" stroke="#1e293b" stroke-width="2" />
+
+  <!-- Terminal Top Bar -->
+  <rect x="2" y="2" width="916" height="38" rx="14" fill="#0c1017" />
+  <rect x="2" y="26" width="916" height="14" fill="#0c1017" />
+  <line x1="2" y1="40" x2="918" y2="40" stroke="#1e293b" stroke-width="1.5" />
+
+  <!-- Window Dots -->
+  <circle cx="24" cy="21" r="5.5" fill="#ef4444" />
+  <circle cx="42" cy="21" r="5.5" fill="#eab308" />
+  <circle cx="60" cy="21" r="5.5" fill="#22c55e" />
+
+  <!-- Terminal Title & Status -->
+  <text x="82" y="25" class="title" fill="#e2e8f0" font-size="12px">TEJA::DISTRIBUTED_ARCHITECTURE_BLUEPRINT</text>
+  <rect x="580" y="11" width="130" height="20" rx="4" fill="#141926" stroke="#22c55e" stroke-width="1" />
+  <circle cx="592" cy="21" r="3.5" fill="#22c55e" class="pulse-green" />
+  <text x="602" y="24.5" class="badge-text" fill="#4ade80">STREAM: ACTIVE</text>
+
+  <rect x="720" y="11" width="180" height="20" rx="4" fill="#141926" stroke="#f97316" stroke-width="1" />
+  <circle cx="732" cy="21" r="3.5" fill="#f97316" class="pulse-orange" />
+  <text x="742" y="24.5" class="badge-text" fill="#fb923c">P99 LATENCY: 2.1ms</text>
+
+  <!-- Flowing Animated Streams -->
+  <path d="M 230 115 L 320 115" stroke="#f97316" stroke-width="2.5" class="stream-fast" fill="none" opacity="0.8" filter="url(#glowOrange)" />
+  <path d="M 490 115 L 560 115" stroke="#38bdf8" stroke-width="2.5" class="stream-line" fill="none" opacity="0.85" filter="url(#glowCyan)" />
+  <path d="M 740 115 L 780 115" stroke="#22c55e" stroke-width="2.5" class="stream-line" fill="none" opacity="0.85" />
+  <path d="M 405 165 L 405 230 L 560 230" stroke="#f97316" stroke-width="2.5" class="stream-line" fill="none" opacity="0.8" filter="url(#glowOrange)" />
+  <path d="M 740 230 L 780 230" stroke="#f97316" stroke-width="2.5" class="stream-fast" fill="none" opacity="0.8" />
+  <path d="M 135 165 L 135 345 L 320 345" stroke="#0ea5e9" stroke-width="2.5" class="stream-line" fill="none" opacity="0.75" />
+  <path d="M 650 165 L 650 345 L 560 345" stroke="#a855f7" stroke-width="2" class="stream-line-reverse" fill="none" opacity="0.7" />
+  <path d="M 490 345 L 450 345" stroke="#a855f7" stroke-width="2" class="stream-line" fill="none" opacity="0.7" />
+
+  <!-- Node 1: Ingestion -->
+  <g transform="translate(40, 65)">
+    <rect width="190" height="100" rx="8" fill="url(#cardGrad)" stroke="#f97316" stroke-width="1.8" />
+    <circle cx="16" cy="18" r="4" fill="#f97316" class="pulse-orange" />
+    <text x="28" y="21" class="title" fill="#f97316">SNMP &amp; Telemetry</text>
+    <text x="16" y="44" class="subtext">Dying Gasp &amp; Alarms</text>
+    <text x="16" y="62" class="subtext">USPS CASS Ingestion</text>
+    <rect x="14" y="74" width="162" height="18" rx="3" fill="#1e293b" />
+    <text x="22" y="86.5" class="badge-text" fill="#fdba74">50k+ EVENTS / SEC</text>
+  </g>
+
+  <!-- Node 2: Kafka -->
+  <g transform="translate(320, 65)">
+    <rect width="170" height="100" rx="8" fill="url(#cardGrad)" stroke="#0284c7" stroke-width="1.8" />
+    <circle cx="16" cy="18" r="4" fill="#38bdf8" class="pulse-cyan" />
+    <text x="28" y="21" class="title" fill="#38bdf8">Apache Kafka</text>
+    <text x="16" y="44" class="subtext">Partitioned Consumer Pools</text>
+    <text x="16" y="62" class="subtext">Replayable Event Logs &amp; DLQ</text>
+    <rect x="14" y="74" width="142" height="18" rx="3" fill="#0f172a" stroke="#0284c7" stroke-width="0.8" />
+    <text x="22" y="86.5" class="badge-text" fill="#7dd3fc">ZERO MESSAGE LOSS</text>
+  </g>
+
+  <!-- Node 3: NOC PulseTriage -->
+  <g transform="translate(560, 65)">
+    <rect width="180" height="100" rx="8" fill="url(#cardGrad)" stroke="#22c55e" stroke-width="1.8" />
+    <circle cx="16" cy="18" r="4" fill="#22c55e" class="pulse-green" />
+    <text x="28" y="21" class="title" fill="#4ade80">NOC PulseTriage</text>
+    <text x="16" y="44" class="subtext">Temporal Correlation Models</text>
+    <text x="16" y="62" class="subtext">Power vs ONT vs Fiber Cut</text>
+    <rect x="14" y="74" width="152" height="18" rx="3" fill="#064e3b" />
+    <text x="22" y="86.5" class="badge-text" fill="#86efac">96% CLASSIFY ACCURACY</text>
+  </g>
+
+  <!-- Node 4: Topology Output -->
+  <g transform="translate(780, 80)">
+    <rect width="105" height="70" rx="6" fill="#1e293b" stroke="#22c55e" stroke-width="1.5" />
+    <text x="12" y="26" class="title" fill="#86efac" font-size="11px">Topology</text>
+    <text x="12" y="44" class="subtext" font-size="10px">ONT ➔ OLT</text>
+    <text x="12" y="60" class="badge-text" fill="#4ade80">-68% MTTI</text>
+  </g>
+
+  <!-- Node 5: Node-RED -->
+  <g transform="translate(560, 195)">
+    <rect width="180" height="90" rx="8" fill="url(#cardGrad)" stroke="#f97316" stroke-width="1.8" />
+    <circle cx="16" cy="18" r="4" fill="#f97316" class="pulse-orange" />
+    <text x="28" y="21" class="title" fill="#fb923c">Node-RED Runtime</text>
+    <text x="16" y="42" class="subtext">Embedded Dynamic Flows</text>
+    <text x="16" y="58" class="subtext">Quiet-Hours &amp; Rule Matrix</text>
+    <rect x="14" y="66" width="152" height="16" rx="3" fill="#431407" />
+    <text x="22" y="77.5" class="badge-text" fill="#fdba74">ZERO-DOWNTIME LOGIC</text>
+  </g>
+
+  <!-- Node 6: ZCN Alert Output -->
+  <g transform="translate(780, 205)">
+    <rect width="105" height="70" rx="6" fill="#1e293b" stroke="#f97316" stroke-width="1.5" />
+    <text x="12" y="26" class="title" fill="#fb923c" font-size="11px">ZCN Alert</text>
+    <text x="12" y="44" class="subtext" font-size="10px">SMS/Mail/Push</text>
+    <text x="12" y="60" class="badge-text" fill="#f97316">99.98% SLA</text>
+  </g>
+
+  <!-- Node 7: Redis -->
+  <g transform="translate(320, 305)">
+    <rect width="130" height="85" rx="8" fill="url(#cardGrad)" stroke="#ef4444" stroke-width="1.5" />
+    <circle cx="14" cy="16" r="3.5" fill="#ef4444" />
+    <text x="24" y="19" class="title" fill="#f87171" font-size="12px">Redis Cache</text>
+    <text x="14" y="38" class="subtext" font-size="10px">Spatial Geohashing</text>
+    <text x="14" y="52" class="subtext" font-size="10px">Token-Bucket Rate</text>
+    <rect x="12" y="62" width="106" height="15" rx="2" fill="#450a0a" />
+    <text x="18" y="73" class="badge-text" fill="#fca5a5">&lt;10ms LATENCY</text>
+  </g>
+
+  <!-- Node 8: PostgreSQL -->
+  <g transform="translate(490, 305)">
+    <rect width="160" height="85" rx="8" fill="url(#cardGrad)" stroke="#a855f7" stroke-width="1.5" />
+    <circle cx="14" cy="16" r="3.5" fill="#a855f7" />
+    <text x="24" y="19" class="title" fill="#c084fc" font-size="12px">PostgreSQL / ORM</text>
+    <text x="14" y="38" class="subtext" font-size="10px">TypeORM Partitioned</text>
+    <text x="14" y="52" class="subtext" font-size="10px">Azure Key Vault PII</text>
+    <rect x="12" y="62" width="136" height="15" rx="2" fill="#3b0764" />
+    <text x="18" y="73" class="badge-text" fill="#e9d5ff">ACID CONSISTENCY</text>
+  </g>
+
+  <!-- Bottom Metrics Dock -->
+  <rect x="40" y="415" width="845" height="42" rx="8" fill="#0b0f19" stroke="#1e293b" stroke-width="1.2" />
+  <g transform="translate(60, 439)">
+    <circle cx="0" cy="0" r="3" fill="#22c55e" class="pulse-green" />
+    <text x="10" y="3" class="metric-label" fill="#94a3b8">MTTI CUT: <tspan fill="#4ade80" font-weight="bold">68% REDUCTION</tspan></text>
+  </g>
+  <g transform="translate(260, 439)">
+    <circle cx="0" cy="0" r="3" fill="#f97316" class="pulse-orange" />
+    <text x="10" y="3" class="metric-label" fill="#94a3b8">NOTIFICATIONS: <tspan fill="#fb923c" font-weight="bold">2M+ DISPATCHED</tspan></text>
+  </g>
+  <g transform="translate(480, 439)">
+    <circle cx="0" cy="0" r="3" fill="#0284c7" class="pulse-cyan" />
+    <text x="10" y="3" class="metric-label" fill="#94a3b8">CACHE SPEED: <tspan fill="#38bdf8" font-weight="bold">&lt;10ms P99</tspan></text>
+  </g>
+  <g transform="translate(690, 439)">
+    <circle cx="0" cy="0" r="3" fill="#a855f7" />
+    <text x="10" y="3" class="metric-label" fill="#94a3b8">GOV SUBSIDY: <tspan fill="#c084fc" font-weight="bold">14d ➔ 45 SEC</tspan></text>
+  </g>
+</svg>
