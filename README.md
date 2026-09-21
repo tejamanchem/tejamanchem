@@ -158,7 +158,7 @@
 ### 🏗️ &nbsp;Core Production Architecture Blueprint
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/tejamanchem/tejamanchem/main/architecture.svg" alt="Teja's Animated Distributed Systems Architecture" width="100%" />
+  <img src="https://raw.githubusercontent.com/tejamanchem/tejamanchem/main/architecturee.svg" alt="Teja's Animated Distributed Systems Architecture" width="100%" />
 </div>
 
 <br>
