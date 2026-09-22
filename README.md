@@ -50,7 +50,7 @@
     <img src="https://raw.githubusercontent.com/Schweinepriester/github-profile-achievements/main/images/pull-shark-default.png" width="72" alt="Pull Shark" title="Pull Shark" />&nbsp;&nbsp;&nbsp;
     <img src="https://raw.githubusercontent.com/Schweinepriester/github-profile-achievements/main/images/quickdraw-default.png" width="72" alt="Quickdraw" title="Quickdraw" />&nbsp;&nbsp;&nbsp;
     <!-- <img src="https://raw.githubusercontent.com/Schweinepriester/github-profile-achievements/main/images/pair-extraordinaire-default.png" width="72" alt="Pair Extraordinaire" title="Pair Extraordinaire" />&nbsp;&nbsp;&nbsp; -->
-    <img src="https://raw.githubusercontent.com/Schweinepriester/github-profile-achievements/main/images/starstruck-default.png" width="72" alt="Starstruck" title="Starstruck" />&nbsp;&nbsp;&nbsp;
+    <!-- <img src="https://raw.githubusercontent.com/Schweinepriester/github-profile-achievements/main/images/starstruck-default.png" width="72" alt="Starstruck" title="Starstruck" />&nbsp;&nbsp;&nbsp; -->
     <img src="https://raw.githubusercontent.com/Schweinepriester/github-profile-achievements/main/images/yolo-default.png" width="72" alt="YOLO" title="YOLO" />
   </a>
 </div>
